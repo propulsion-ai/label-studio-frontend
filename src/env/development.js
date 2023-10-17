@@ -76,7 +76,7 @@ import { ClassificationMixed } from '../examples/classification_mixed';
  */
 // import { AllTypes } from "../examples/all_types";
 
-const data = Buckets;
+const data = ClassificationMixed;
 
 function getData(task) {
   if (task && task.data) {
@@ -146,7 +146,6 @@ function configureApplication(params) {
 
   const options = {
     settings: params.settings || {},
-    alert: m => console.log(m), // Noop for demo: window.alert(m)
     messages: { ...Messages, ...params.messages },
     onSubmitAnnotation: params.onSubmitAnnotation ? params.onSubmitAnnotation : External.onSubmitAnnotation,
     onUpdateAnnotation: params.onUpdateAnnotation ? params.onUpdateAnnotation : External.onUpdateAnnotation,
