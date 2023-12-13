@@ -1006,6 +1006,7 @@ export default observer(
                 style={item.canvasSize}
               >
                 <img
+                  crossorigin="anonymous" 
                   ref={ref => {
                     item.setImageRef(ref);
                     this.imageRef.current = ref;
@@ -1084,6 +1085,8 @@ export default observer(
               {item.images.map((src, i) => (
                 <img
                   {...imgDefaultProps}
+                  crossorigin="anonymous" 
+                  crossOrigin="anonymous" 
                   alt=""
                   key={src}
                   src={src}

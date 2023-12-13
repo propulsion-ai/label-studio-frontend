@@ -102,6 +102,7 @@ const ImageRenderer = observer(forwardRef(({
   return (
     <img
       {...imgDefaultProps}
+      crossorigin="anonymous" 
       ref={ref}
       alt="image"
       src={src}
