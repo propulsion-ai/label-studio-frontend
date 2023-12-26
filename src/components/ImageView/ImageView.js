@@ -1023,9 +1023,10 @@ export default observer(
                     item.currentImageEntity.setImageLoaded(true);
                   }}
                   onError={this.handleError}
-                  crossOrigin={item.imageCrossOrigin}
+                  crossOrigin={"anonymous"}
                   alt="LS"
                 />
+                <textarea>{JSON.stringify(item)}</textarea>
                 {isFF(FF_DEV_4081) ? (
                   <canvas
                     className={styles.overlay}
@@ -1095,8 +1096,11 @@ export default observer(
                   className={i === item.currentImage && styles.active}
                   height="60"
                   onClick={() => item.setCurrentImage(i)}
+                  // crossOrigin={item.imageCrossOrigin}
+                  crossOrigin={"anonymous"}
                 />
               ))}
+              <textarea>{JSON.stringify(item)}</textarea>
             </div>
           )}
         </ObjectTag>

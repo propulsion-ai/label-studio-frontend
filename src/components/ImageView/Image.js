@@ -100,6 +100,7 @@ const ImageRenderer = observer(forwardRef(({
   }, [imageTransform, isLoaded]);
 
   return (
+    <>
     <img
       {...imgDefaultProps}
       ref={ref}
@@ -107,7 +108,10 @@ const ImageRenderer = observer(forwardRef(({
       src={src}
       onLoad={onLoad}
       style={imageStyles}
+      crossOrigin='anonymous'
     />
+    <textarea>LAST ONE</textarea>
+    </>
   );
 }));
 
